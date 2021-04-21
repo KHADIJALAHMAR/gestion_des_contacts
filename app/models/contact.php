@@ -1,5 +1,5 @@
 <?php
-    class contact {
+    class Contact {
         private $db;
 
         public function __construct(){

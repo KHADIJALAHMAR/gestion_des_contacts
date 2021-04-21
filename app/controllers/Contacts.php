@@ -1,7 +1,7 @@
 <?php
     class Contacts extends Controller{
         public function __construct(){
-            $this->contactModel = $this->model("contact");
+            $this->contactModel = $this->model("Contact");
         }
 
         public function addShowContacts(){
