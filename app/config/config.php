@@ -3,10 +3,10 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', '__YOURDB__');
+define('DB_NAME', 'contacts_app');
 // app Root 
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL root 
-define('URLROOT', '__URLPLACEHOLDER__');
+define('URLROOT', 'http://localhost/gestion_des_contacts');
 // site name 
-define('SITENAME', '__SITENAMEPLACEHOLDER__');
+define('SITENAME', 'gestion des contacts');
