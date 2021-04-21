@@ -12,7 +12,11 @@ class Pages extends Controller {
         $this->view('pages/index',$data);
     }
     public function about() {
-        $data = ['title' => 'about us'];
+        $data = ['title' => 'about us',
+                'description' => 'secure application to store  all your contacts in one place.',
+                'version' => '1.0',
+                'devs' => 'Adnan Bouthir, Youssef Bouhalla, Khadija Lahmar, Asmaa Talha.'              
+    ];
         $this->view('pages/about', $data); 
     }
     
