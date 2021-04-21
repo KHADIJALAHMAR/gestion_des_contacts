@@ -6,7 +6,9 @@ class Pages extends Controller {
     }
     public function index() {
         
-        $data = ['title' => 'welcome'];
+        $data = ['title' => 'Contacts app',
+                 'description' => 'Simple contacts management app built on a mini mvc php framework'  
+        ];
         $this->view('pages/index',$data);
     }
     public function about() {
