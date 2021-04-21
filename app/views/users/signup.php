@@ -4,7 +4,7 @@
       <div class="card card-body bg-light mt-5">
         <h2>Create An Account</h2>
         <p>Please fill out this form to register with us</p>
-        <form action="<?php echo URLROOT; ?>/users/signup" method="post">
+        <form action="<?php echo URLROOT; ?>/users/signup" method="POST">
           <div class="form-group">
             <label for="username">username: <sup>*</sup></label>
             <input type="text" name="username" class="form-control form-control-lg <?php echo (!empty($data['username_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['username']; ?>">
