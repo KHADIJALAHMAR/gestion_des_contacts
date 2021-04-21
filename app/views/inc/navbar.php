@@ -7,7 +7,7 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT;?>">Home</a>
           </li>
           <li class="nav-item">
@@ -15,14 +15,7 @@
           
         </ul>
 
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="<?php echo URLROOT;?>/users/signup">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT;?>/users/login">login</a>
-          
-        </ul>
+        
         
       </div>
     </nav> 
