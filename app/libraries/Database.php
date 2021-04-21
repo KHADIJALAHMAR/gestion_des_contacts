@@ -56,7 +56,7 @@ class Database {
             }
         }
 
-        $this->stms->bindValue($param, $value, $type);
+        $this->stmt->bindValue($param, $value, $type);
     }
     // execute prepared statement 
     public function execute(){

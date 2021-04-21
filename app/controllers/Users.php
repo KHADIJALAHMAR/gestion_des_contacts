@@ -2,7 +2,7 @@
 class Users extends Controller {
     public function __construct()
     {
-        
+        $this->userModel = $this->model('User');
     }
     public function signup(){
         // checking for form submit
@@ -23,7 +23,12 @@ class Users extends Controller {
             // username validation 
             if (empty($data['username'])) {
                 $data['username_err'] = 'please enter your username';
+            }else {
+                // check if username already exists
+                if ($this->userModel->findUser($data['username'])) {
+                    $data['username_err'] = 'username already taken';
             }
+         }
             // password validation 
             if (empty($data['password'])) {
                 $data['password_err'] = 'please enter your password';
