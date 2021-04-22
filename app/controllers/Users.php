@@ -97,20 +97,20 @@ class Users extends Controller {
             }
              // password validation 
              if (empty($data['password'])) {
-                $data['password_err'] = 'please enter your username';
+                $data['password_err'] = 'please enter your password';
             }
 
             //check for username/password
             if ($this->userModel->findUser($data['username'])) {
                 // user found
             }else {
-                $data['username_err'] = 'username entered doesnt exist';
+                $data['username_err'] = 'please enter a valid username';
             }
 
             // make sure array errors is empty
             if (empty($data['username_err']) && empty($data['password_err'])) {
                 // validated
-                
+
 
             }else {
                 $this->view('users/login', $data);
