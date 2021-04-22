@@ -109,7 +109,9 @@ class Users extends Controller {
 
             // make sure array errors is empty
             if (empty($data['username_err']) && empty($data['password_err'])) {
-                // validated
+                // valid
+                // checking and setting logged in user
+                
 
 
             }else {
