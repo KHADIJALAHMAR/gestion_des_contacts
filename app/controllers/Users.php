@@ -111,7 +111,15 @@ class Users extends Controller {
             if (empty($data['username_err']) && empty($data['password_err'])) {
                 // valid
                 // checking and setting logged in user
-                
+                $loggedInUser = $this->userModel->logIn($data['username'], $data['password']);
+                if ($loggedInUser) {
+                    // create session
+                    die('success');
+                }else {
+                    $data['password_err'] = 'password incorrect';
+                    $this->view('users/login', $data);
+                }
+
 
 
             }else {

@@ -25,7 +25,7 @@ class User {
         $this->db->bind(':username', $username);
 
         $row = $this->db->single();
-        $hashed_password = $row->password;
+        $hashed_password = $row->user_pass;
         if (password_verify($password, $hashed_password)) {
             return $row;
         }else {
