@@ -18,6 +18,23 @@ class User {
             return false;
         }
     }
+
+    // log in the user 
+    public function logIn($username, $password) {
+        $this->db->query('SELECT * FROM users WHERE username = :username');
+        $this->db->bind(':username', $username);
+
+        $row = $this->db->single();
+        $hashed_password = $row->user_pass;
+        if (password_verify($password, $hashed_password)) {
+            return $row;
+        }else {
+            return false;
+        }
+
+    }
+
+
     // check user by username
     public function findUser($username) {
         $this->db->query('SELECT * FROM users WHERE username = :username');
