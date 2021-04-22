@@ -35,22 +35,22 @@
     <div class="row" >
         <div class="form-group col">
             <label for="name">Name</label>
-            <input type="text" class="form-control" placeholder="Enter name" id="name">
+            <input type="text" name="name" class="form-control" placeholder="Enter name" id="name">
         </div>
         <div class="form-group col">
             <label for="phone">Phone</label>
-            <input type="number" class="form-control" placeholder="Enter phone" id="phone">
+            <input type="number" name="phone" class="form-control" placeholder="Enter phone" id="phone">
         </div>
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" placeholder="Enter email" id="email">
+        <input type="email" name="email" class="form-control" placeholder="Enter email" id="email">
     </div>
     <div class="form-group">
         <label for="adress">Adress</label>
-        <textarea class="form-control mh-50" placeholder="Enter adress" id="adress"></textarea>
+        <textarea class="form-control mh-50" name="adress" placeholder="Enter adress" id="adress"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" name="save" class="btn btn-primary">Save</button>
 </form>
 <!-- end contact form -->
 
