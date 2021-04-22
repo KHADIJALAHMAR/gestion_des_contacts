@@ -45,7 +45,14 @@ class Users extends Controller {
             }
             // make sure array errors is empty
             if (empty($data['username_err']) && empty($data['password_err']) && empty($data['confirm_pass_err'])) {
-                die('SUCCESS');
+                // encrypt password
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+                // register user
+                if ($this->userModel->signUp($data)) {
+                    header('location: ' . URLROOT . '/users/login');
+                }else {
+                    die('something went wrong');
+                }
             }else {
                 $this->view('users/signup', $data);
             }
@@ -90,11 +97,21 @@ class Users extends Controller {
             }
              // password validation 
              if (empty($data['password'])) {
-                $data['password_err'] = 'please enter your username';
+                $data['password_err'] = 'please enter your password';
             }
+
+            //check for username/password
+            if ($this->userModel->findUser($data['username'])) {
+                // user found
+            }else {
+                $data['username_err'] = 'please enter a valid username';
+            }
+
             // make sure array errors is empty
             if (empty($data['username_err']) && empty($data['password_err'])) {
-                die('SUCCESS');
+                // validated
+
+
             }else {
                 $this->view('users/login', $data);
             }
