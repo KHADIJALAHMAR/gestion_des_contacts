@@ -48,7 +48,7 @@
     </div>
     <div class="form-group">
         <label for="adress">Adress</label>
-        <textarea class="form-control" placeholder="Enter adress" id="adress"></textarea>
+        <textarea class="form-control mh-50" placeholder="Enter adress" id="adress"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
