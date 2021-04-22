@@ -9,7 +9,7 @@
         public function addShowContacts(){
             $data =[];
             $this->session->startSession();
-            $username = $this->session->getSession();
+            $username = $this->session->getSession('username');
             $result = $this->contactModel->getContacts($username);
             foreach ($result as $row) {
                 array_push($data,$row);
