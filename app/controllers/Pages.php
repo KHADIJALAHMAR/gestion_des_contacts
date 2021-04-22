@@ -2,9 +2,11 @@
 class Pages extends Controller {
     public function __construct()
     {
-       
+        $this->session = new Session;
     }
     public function index() {
+        $this->session->startSession();
+
         
         $data = ['title' => 'Contacts app',
                  'description' => 'Simple contacts management app built on a mini mvc php framework'  

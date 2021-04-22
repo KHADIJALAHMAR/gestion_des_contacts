@@ -2,7 +2,7 @@
 // DB params
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'yareyaredaze');
 define('DB_NAME', 'contacts_app');
 // app Root 
 define('APPROOT', dirname(dirname(__FILE__)));

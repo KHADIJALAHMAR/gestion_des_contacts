@@ -6,6 +6,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <!-- home and about list -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT;?>">Home</a>
@@ -14,7 +15,16 @@
             <a class="nav-link" href="<?php echo URLROOT;?>/pages/about">About us</a>
           
         </ul>
-
+        <!-- profile and logout list -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo URLROOT;?>">user</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo URLROOT;?>/users/logout">Logout</a>
+          
+        </ul>
+        
         
         
       </div>

@@ -4,6 +4,7 @@ class User {
     public function __construct()
     {
         $this->db = new Database;
+
     }
     // register user
     public function signUp($data) {

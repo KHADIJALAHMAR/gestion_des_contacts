@@ -149,4 +149,15 @@ class Users extends Controller {
             $this->view('users/login', $data);
         }
     }
+    public function logout(){
+        $this->userSession->startSession();
+        $this->userSession->unsetSession('username');
+        $data = ['title' => 'Contacts app',
+                 'description' => 'Simple contacts management app built on a mini mvc php framework',
+                 
+        ];
+        
+        // load view
+        $this->view('pages/index', $data);
+    }
 }
