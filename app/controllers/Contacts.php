@@ -1,12 +1,16 @@
 <?php
     class Contacts extends Controller{
+        private $session;
         public function __construct(){
             $this->contactModel = $this->model("Contact");
+            $this->session = new Session;
         }
 
         public function addShowContacts(){
             $data =[];
-            $result = $this->contactModel->getContacts();
+            $this->session->startSession();
+            $username = $this->session->getSession();
+            $result = $this->contactModel->getContacts($username);
             foreach ($result as $row) {
                 array_push($data,$row);
             }
