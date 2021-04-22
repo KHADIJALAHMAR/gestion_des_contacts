@@ -3,6 +3,7 @@ class Users extends Controller {
     public function __construct()
     {
         $this->userModel = $this->model('User');
+        $this->userSession = new Session;
     }
     public function signup(){
         // checking for form submit
@@ -79,6 +80,8 @@ class Users extends Controller {
         }
     }
     public function login(){
+        // init session :
+        $this->userSession->startSession();
         // checking for form submit
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // process
@@ -109,13 +112,20 @@ class Users extends Controller {
 
             // make sure array errors is empty
             if (empty($data['username_err']) && empty($data['password_err'])) {
+                
                 // valid
                 // checking and setting logged in user
                 $loggedInUser = $this->userModel->logIn($data['username'], $data['password']);
                 if ($loggedInUser) {
+                    
                     // create session
-                    die('success');
+                    $this->userSession->setSession('username',$data['username']);
+                    
+                    // if logged in direct user to profile
+                    header('location:' . URLROOT . '/contacts/addShowContacts');
+
                 }else {
+                    
                     $data['password_err'] = 'password incorrect';
                     $this->view('users/login', $data);
                 }

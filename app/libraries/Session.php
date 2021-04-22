@@ -1,7 +1,7 @@
 <?php 
 
     class Session{
-        private $session;
+        
         public function __construct(){
 
         }
@@ -10,16 +10,16 @@
             session_start();
         }
         // set session method
-        public function setSession(){
-            $this->session = $_SESSION['username'];
+        public function setSession($name,$value){
+            $_SESSION['"'.$name .'"'] = $value;
         }
         // get session method
-        public function getSession(){
-            return $this->session;
+        public function getSession($name){
+            return $_SESSION['"'.$name .'"'];
         }
         // get session method
-        public function unsetSession(){
-            unset($this->session);
+        public function unsetSession($name){
+            unset($_SESSION['"'.$name .'"']);
         }
 
     }
