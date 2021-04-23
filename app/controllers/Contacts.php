@@ -7,8 +7,11 @@
         }
 
         public function addShowContacts(){
+            // init data array
             $data =[];
+            // starting session
             $this->session->startSession();
+            // print_r($_SESSION);
             $username = $this->session->getSession('username');
             $result = $this->contactModel->getContacts($username);
             foreach ($result as $row) {
