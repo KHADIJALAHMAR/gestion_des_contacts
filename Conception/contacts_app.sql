@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2021 at 05:27 PM
+-- Generation Time: Apr 23, 2021 at 11:52 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -36,6 +36,14 @@ CREATE TABLE `contacts` (
   `username` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`contact_id`, `contact_name`, `contact_phone`, `conatct_email`, `contact_adress`, `username`) VALUES
+(1, 'youssef', 612653126, 'dakhdqjkdkaz@gmail.com', 'adhoizydoauzgoudfgazougdouagqoufdga agendiz', 'youssefbhl'),
+(2, 'adnan', 62751623, 'adnaneda@gmail.com', 'dajdlihqsiodjazoijdaoj filage', 'adnanbou');
+
 -- --------------------------------------------------------
 
 --
@@ -45,10 +53,19 @@ CREATE TABLE `contacts` (
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `user_pass` varchar(30) NOT NULL,
+  `user_pass` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `last_login` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `user_pass`, `created_at`, `last_login`) VALUES
+(4, 'youssefbhl', '$2y$10$hFoJjafOkfkyG/upq9LbZOL1X0yqn.SL5p2tErS3aRaFg0vBMoBX6', '2021-04-22 12:06:17', NULL),
+(5, 'adnanbou', '$2y$10$jPl6Pu6vVENnOYVt7fip.O1x9GfI/QGJI08EBoTQdudkVrGk/1kpe', '2021-04-22 13:50:23', NULL),
+(6, 'hakim', '$2y$10$VujHKRThABwfAnTvtkZUC.0RluXMxBZsrZ5Eo5zyvS5LDJ57WrYqi', '2021-04-22 19:52:52', NULL);
 
 --
 -- Indexes for dumped tables
@@ -76,13 +93,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
