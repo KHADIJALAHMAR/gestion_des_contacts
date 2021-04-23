@@ -6,8 +6,8 @@
         <p>Please fill out this form to register with us</p>
         <form action="<?php echo URLROOT; ?>/users/signup" method="POST">
           <div class="form-group">
-            <label for="username">username: <sup>* your username must be unique</sup></label>
-            <input type="text" name="username" class="form-control form-control-lg <?php echo (!empty($data['username_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['username']; ?>">
+            <label for="username">username: <sup>* Usernames must be lowercase and 4-10 characters in length</sup></label>
+            <input pattern="[a-z]{4,10}" type="text" name="username" class="form-control form-control-lg <?php echo (!empty($data['username_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['username']; ?>">
             <span class="invalid-feedback"><?php echo $data['username_err']; ?></span>
           </div>
           <div class="form-group">
