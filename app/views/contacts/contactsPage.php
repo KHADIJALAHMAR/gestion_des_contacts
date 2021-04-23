@@ -15,8 +15,8 @@
                 <p class="col-lg-1 font-weight-bold"><?php echo $value->contact_name; ?></p>
                 <p class="col-lg-2"><?php echo "+212" . $value->contact_phone; ?></p>
                 <p class="col-lg-2"><?php echo $value->conatct_email; ?></p>
-                <p class="col-lg-4"><?php echo $value->contact_adress; ?></p>
-                <div class="col-lg-3 d-flex flex-column">
+                <p class="col-lg-6"><?php echo $value->contact_adress; ?></p>
+                <div class="col-lg-1 d-flex flex-column">
                     <a href="#">Update</a>
                     <a href="#">Delete</a>
                 </div>
