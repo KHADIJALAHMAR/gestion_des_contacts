@@ -9,16 +9,16 @@
       <!-- home and about list -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT;?>">Home</a>
+            <a class="nav-link" href="<?php echo URLROOT; echo (isset($_SESSION['"username"'])) ? '/contacts/addShowContacts' : '';?>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT;?>/pages/about">About us</a>
           
         </ul>
         <!-- profile and logout list -->
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto <?php echo (isset($_SESSION['"username"'])) ? 'd-flex' : 'd-none'; ?>">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT;?>">user</a>
+            <a class="nav-link" href="<?php echo URLROOT;?>"><?php echo $_SESSION['"username"']; ?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT;?>/users/logout">Logout</a>
