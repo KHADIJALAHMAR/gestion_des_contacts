@@ -154,7 +154,6 @@ class Users extends Controller {
         $this->userSession->unsetSession('username');
         $data = ['title' => 'Contacts app',
                  'description' => 'Simple contacts management app built on a mini mvc php framework',
-                 
         ];
         
         // load view
