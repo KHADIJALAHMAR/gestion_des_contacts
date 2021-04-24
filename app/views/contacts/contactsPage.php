@@ -48,7 +48,7 @@
     </div>
     <div class="form-group">
         <label for="adress">Adress</label>
-        <textarea class="form-control mh-50" name="adress" placeholder="Enter adress" id="adress"></textarea>
+        <textarea class="form-control min-height" name="adress" placeholder="Enter adress" id="adress"></textarea>
     </div>
     <button type="submit" name="save" class="btn btn-primary">Save</button>
 </form>

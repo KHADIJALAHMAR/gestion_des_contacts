@@ -14,7 +14,7 @@ class Controller {
     }
 
     // load view 
-    protected function view($view, $data = []) {
+    protected function view($view, $data = [],$insdata = []) {
         // check for view file 
         if (file_exists('../app/views/' .$view . '.php')) {
             require_once '../app/views/' .$view . '.php';
