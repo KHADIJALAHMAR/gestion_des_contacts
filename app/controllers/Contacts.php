@@ -29,7 +29,7 @@
                     'contact_name' => trim($_POST['name']),
                     'contact_phone' => trim($_POST['phone']),
                     'contact_email' => trim($_POST['email']),
-                    'contact_adress' => trim($_POST['pass']),
+                    'contact_adress' => trim($_POST['adress']),
                     'name_err' => '',
                     'phone_err' => '',
                     'email_err' => '',

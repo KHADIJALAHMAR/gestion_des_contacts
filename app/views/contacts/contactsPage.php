@@ -35,20 +35,24 @@
     <div class="row" >
         <div class="form-group col">
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Enter name" id="name">
+            <input type="text" name="name" class="form-control <?php echo (!empty($insdata['name_err'])) ? 'is-invalid' : ''; ?>" placeholder="Enter name" id="name">
+            <span class="invalid-feedback"><?php echo $insdata['name_err']; ?></span>
         </div>
         <div class="form-group col">
             <label for="phone">Phone</label>
-            <input type="number" name="phone" class="form-control" placeholder="Enter phone" id="phone">
+            <input type="number" name="phone" class="form-control <?php echo (!empty($insdata['phone_err'])) ? 'is-invalid' : ''; ?>" placeholder="Enter phone" id="phone">
+            <span class="invalid-feedback"><?php echo $insdata['phone_err']; ?></span>
         </div>
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" name="email" class="form-control" placeholder="Enter email" id="email">
+        <input type="email" name="email" class="form-control <?php echo (!empty($insdata['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="Enter email" id="email">
+        <span class="invalid-feedback"><?php echo $insdata['email_err']; ?></span>
     </div>
     <div class="form-group">
         <label for="adress">Adress</label>
-        <textarea class="form-control min-height" name="adress" placeholder="Enter adress" id="adress"></textarea>
+        <textarea class="form-control min-height <?php echo (!empty($insdata['adress_err'])) ? 'is-invalid' : ''; ?>" name="adress" placeholder="Enter adress" id="adress"></textarea>
+        <span class="invalid-feedback"><?php echo $insdata['adress_err']; ?></span>
     </div>
     <button type="submit" name="save" class="btn btn-primary">Save</button>
 </form>
