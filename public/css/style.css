@@ -1,3 +1,6 @@
 .contactform{
     padding-bottom: 50px;
 }
+.min-height{
+    min-height: 70px;
+}
