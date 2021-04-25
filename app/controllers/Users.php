@@ -6,6 +6,12 @@ class Users extends Controller {
         $this->userSession = new Session;
     }
     public function signup(){
+        // init session
+        $this->userSession->startSession();
+        // checking if a user logged in & redirect to their home
+        if (isset($_SESSION['"username"'])) {
+            header('location:' . URLROOT . '/contacts/addShowContacts');
+        }
         // checking for form submit
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
@@ -82,6 +88,10 @@ class Users extends Controller {
     public function login(){
         // init session :
         $this->userSession->startSession();
+        // checking if a user logged in & redirect to their home
+        if (isset($_SESSION['"username"'])) {
+            header('location:' . URLROOT . '/contacts/addShowContacts');
+        }
         // checking for form submit
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // process
