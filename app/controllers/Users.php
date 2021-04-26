@@ -169,4 +169,13 @@ class Users extends Controller {
         // load view
         $this->view('pages/index', $data);
     }
+    // profile
+    public function profile(){
+        $this->userSession->startSession();
+
+        $result = $this->userModel-> getProfile($_SESSION['"username"']);
+
+         // load view
+         $this->view('users/profile', $result);
+    }
 }
