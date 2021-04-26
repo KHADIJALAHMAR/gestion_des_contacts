@@ -12,7 +12,7 @@
           </div>
           <div class="form-group">
             <label for="password">Password: <sup>* password must have one capital one lowercase and more than 8 characters</sup></label>
-            <input pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
+            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
             <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
           </div>
           <div class="form-group">

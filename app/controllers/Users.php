@@ -173,9 +173,9 @@ class Users extends Controller {
     public function profile(){
         $this->userSession->startSession();
 
-        $result = $this->userModel-> getProfile($_SESSION['"username"']);
+        $data = $this->userModel-> getProfile($_SESSION['"username"']);
 
          // load view
-         $this->view('users/profile', $result);
+         $this->view('users/profile', $data);
     }
 }
