@@ -51,4 +51,13 @@ class User {
         }
 
     }
+    //  get user for profile
+
+    public function getProfile($username){
+        $this->db->query('SELECT * FROM users WHERE username = :username');
+        $this->db->bind(':username',$username);
+
+        return  $this->db->singleAssoc();
+
+    }
 }
