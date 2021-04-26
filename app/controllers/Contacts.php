@@ -11,6 +11,10 @@
             $data =[];
             // starting session
             $this->session->startSession();
+            // checking if a user logged in & redirect to their home
+        if (!isset($_SESSION['"username"'])) {
+            header('location:' . URLROOT . '/users/login');
+        }
             // print_r($_SESSION);
             $username = $this->session->getSession('username');
             //  getting data
