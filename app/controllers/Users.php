@@ -130,6 +130,10 @@ class Users extends Controller {
                     
                     // create session
                     $this->userSession->setSession('username',$data['username']);
+
+                    // updating last login for user 
+
+                    $this->userModel->updateLastLogin($data['username']);
                     
                     // if logged in direct user to profile
                     header('location:' . URLROOT . '/contacts/addShowContacts');
