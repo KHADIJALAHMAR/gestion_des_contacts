@@ -62,7 +62,7 @@ class User {
      // update last login column in db:
      public function updateLastLogin($username) {
         $this->db->query('UPDATE users SET last_login = :lastlogin WHERE username = :username');
-        $this->db->bind(':lastlogin', time());
+        $this->db->bind(':lastlogin', date('Y-m-d H:i:s'));
         $this->db->bind(':username',$username);
         $this->db->execute();
 
