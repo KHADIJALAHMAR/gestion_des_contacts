@@ -51,8 +51,16 @@ class User {
         }
 
     }
-    // update last login column in db:
-    public function updateLastLogin($username) {
+    //  get user for profile
+
+    public function getProfile($username){
+        $this->db->query('SELECT * FROM users WHERE username = :username');
+        $this->db->bind(':username',$username);
+
+        return  $this->db->singleAssoc();
+    }
+     // update last login column in db:
+     public function updateLastLogin($username) {
         $this->db->query('UPDATE users SET last_login = :lastlogin WHERE username = :username');
         $this->db->bind(':lastlogin', date('Y-m-d H:i:s'));
         $this->db->bind(':username',$username);

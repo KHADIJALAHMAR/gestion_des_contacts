@@ -18,7 +18,7 @@
         <!-- profile and logout list -->
         <ul class="navbar-nav ml-auto <?php echo (isset($_SESSION['"username"'])) ? 'd-flex' : 'd-none'; ?>">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT;?>"><?php echo $_SESSION['"username"']; ?></a>
+            <a class="nav-link" href="<?php echo URLROOT;?>/users/profile"><?php echo $_SESSION['"username"']; ?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT;?>/users/logout">Logout</a>
