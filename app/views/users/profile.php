@@ -6,17 +6,20 @@
 
     <h3 class="my-sm-4">Your profile:</h3>
     <hr>
-
-    <label class="col-lg-1 font-weight-bold">Username:</label>
-    <span class="col-lg-6"><?php echo $data['username']; ?></span>
+    <div class="row">
+        <label class="col-lg-3 font-weight-bold">Username:</label>
+        <span class="col-lg-3"><?php echo $data['username']; ?></span>
+    </div>
     <hr>
-
-    <label class="col-lg-1 font-weight-bold">Signup date:</label>
-    <span class="col-lg-2"><?php $day = date('l,d F'); echo $day . ' ' . $data['created_at']; ?></span>
+    <div class="row">
+        <label class="col-lg-3 font-weight-bold">Signup date:</label>
+        <span class="col-lg-3"><?php $time = strtotime($data['created_at']); $day = date('D,d M Y G:is +0000', $time); echo $day; ?></span>
+    </div>
     <hr>
-
-    <label class="col-lg-1 font-weight-bold">Last login:</label>
-    <span class="col-lg-2"><?php $day1 = date('l,d F Y'); echo $day1 . ' ' . $data['last_login']; ?></span>
+    <div class="row">
+        <label class="col-lg-3 font-weight-bold">Last login:</label>
+        <span class="col-lg-3"><?php $time1 = strtotime($data['last_login']); $day1 = date('D,d M Y G:i:s +0000',$time1); echo $day1; ?></span>
+    </div>
 
 <!-- footer -->
 <?php require APPROOT .'/views/inc/footer.php'; ?>
