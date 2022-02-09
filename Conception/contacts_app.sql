@@ -67,6 +67,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `username`, `user_pass`, `created_at`, `last_login`) VALUES
 (4, 'youssefbhl', '$2y$10$hFoJjafOkfkyG/upq9LbZOL1X0yqn.SL5p2tErS3aRaFg0vBMoBX6', '2021-04-22 12:06:17', NULL),
 (5, 'adnanbou', '$2y$10$jPl6Pu6vVENnOYVt7fip.O1x9GfI/QGJI08EBoTQdudkVrGk/1kpe', '2021-04-22 13:50:23', NULL),
+(7, `userSomethin`, `$2y$10$jPl6Pu6vVENnOYVt7fip.O1x9GfI/QGJI08EBoTQdudkVrGk/1kpe`, `2021-05-22 19:52:52`, NULL)
 (6, 'hakim', '$2y$10$VujHKRThABwfAnTvtkZUC.0RluXMxBZsrZ5Eo5zyvS5LDJ57WrYqi', '2021-04-22 19:52:52', NULL);
 
 --
